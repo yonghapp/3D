@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D旋转</title>
+	<style type="text/css">
+	body{
+		background: radial-gradient(circle at 50% 50%,#fff,#ddd,#aaa,#ccc,#333,#000)
+	}
+		.z{
+			width: 214px;
+			height:126px;
+			margin: 250px auto;
+		}
+		.content{
+			position:relative;
+			width:214px;
+			height:126px;
+			transform-style:preserve-3d;
+			animation:sz 4s infinite;
+
+		}
+		.content a{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			font-size: 50px;
+			margin-left: 60px;
+			text-align: center;
+			line-height: 126px;
+			font-weight: 800;
+			color:#ccc;
+			text-shadow:10px 10px 10px #333;
+			display: none;
+		}
+		.content:hover a{
+			display: block;
+			
+		}
+		.a{
+			position: absolute;
+			width:214px;
+			height:126px;
+			border:3px solid #000;
+			opacity: 0.5;
+			transition:1s ease-in-out;
+			
+		}
+		.content:hover .a{
+			box-shadow: 10px 10px 30px #000;
+		}
+		.a1,
+		.a2{
+			width:126px;
+			height:126px;
+		}
+		.a img{
+			width: 100%;
+			height: 100%;
+		}
+		.a1{
+			transform: translateX(150px) rotateY(90deg);
+		}
+		.content:hover .a1{
+			transform: translateX(300px) rotateY(90deg);
+			
+		}
+		.a2{
+			transform: translateX(-65px) rotateY(-90deg);
+		}
+		.content:hover .a2{
+			transform: translateX(-300px) rotateY(90deg);
+		
+			
+		}
+		.a3{
+			transform: translateY(63px) rotateX(90deg);
+		}
+		.content:hover .a3{
+			transform: translateY(200px) rotateX(90deg);
+			
+		}
+		.a4{
+			transform: translateY(-63px) rotateX(-90deg);
+		}
+		.content:hover .a4{
+			transform: translateY(-200px) rotateX(-90deg);
+		
+		}
+		.a5{
+			transform: translateZ(63px);
+		}
+		.content:hover .a5{
+			transform: translateZ(300px);
+			
+		}
+		.a6{
+			transform: translateZ(-63px);
+		}
+		.content:hover .a6{
+			transform: translateZ(-300px);
+			
+		}
+		@keyframes sz{
+	0%{
+		transform:rotateY(0deg);
+	}
+	25%{
+		transform:rotateX(-90deg);		
+	}
+	75%{
+		transform:rotateY(-180deg);		
+	}
+	100%{
+		transform: rotateX(360deg);
+	}
+	}
+
+}
+
+	</style>
+</head>
+<body>
+<div class="z">
+	<div class="content">
+		<a>图片</a>
+		<div class="a a1"><img src="muisc_03.png"></div>
+		<div class="a a2"><img src="muisc_03.png"></div>
+		<div class="a a3"><img src="muisc_03.png"></div>
+		<div class="a a4"><img src="muisc_03.png"></div>
+		<div class="a a5"><img src="muisc_03.png"></div>
+		<div class="a a6"><img src="muisc_03.png"></div>
+	</div>
+</div>
+</body>
+</html>
